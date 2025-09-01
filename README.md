@@ -41,12 +41,12 @@ The folder structure is as follows:
 ├── output_check_visualize.py: The file to check the output and visualize the results.
 ├── output_metric_calc.py: The file to calculate the metrics of the output.
 ├── requirements.txt: The requirements file.
-├── README.md: The readme file.
-└── weights: The trained model weights.
+└── README.md: The readme file.
 ```
 
-## Dataset
-The dataset is contained in the AnnotatedData folder. The dataset is annotated with the 3D point cloud of the human body.
+## Dataset and weights
+
+The dataset and weights can be downloaded from here: [TAP3D_dataset and weights](https://1drv.ms/f/c/bcc85cc8aeae2510/Egeueqc-OdJLtx5Cm-rsgXYBmXvJ3EsxVY73lx6-mF3jaQ?e=OIdNsN)
 
 
 ## Training and testing (Optional)
