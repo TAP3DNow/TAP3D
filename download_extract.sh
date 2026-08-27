@@ -32,6 +32,8 @@ for folder in ./*; do
     fi
 done
 
+cd ..
+
 echo "Downloading logs/"
 hf download TAP3DNow/TAP3D logs.zip --repo-type dataset --local-dir ./
 unzip logs.zip
