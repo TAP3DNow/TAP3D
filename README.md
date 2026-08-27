@@ -69,7 +69,7 @@ Large artifacts are hosted outside this repository. Download only what your targ
 | `logs/` | Precomputed metric pickles | Level 1 | `https://huggingface.co/datasets/TAP3DNow/TAP3D/resolve/main/logs.zip?download=true` | 46 MB |
 | `TAP3D_compare2others/` | Depth comparison vs. Radar / TADAR | Level 1 (Figure 10) | `https://huggingface.co/datasets/TAP3DNow/TAP3D/resolve/main/TAP3D_compare2others.zip?download=true` | 62.7 KB |
 | `weights/` | Pretrained checkpoints | Level 2 (and SSL finetune in Level 3) | `https://huggingface.co/datasets/TAP3DNow/TAP3D/resolve/main/weights.zip?download=true` | 1.5 GB |
-| `AnnotatedData/` | Annotated recordings and labels | Level 2 and Level 3 | `[TBD — cloud drive link]` |   2.78 GB |
+| `AnnotatedData/` | Annotated recordings and labels | Level 2 and Level 3 | `https://huggingface.co/datasets/TAP3DNow/TAP3D/tree/main/AnnotatedData` |   2.78 GB |
 
 ---
 
