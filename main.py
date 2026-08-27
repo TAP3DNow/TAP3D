@@ -113,7 +113,12 @@ def correct_none_in_config(config):
         if value == 'None':
             config[key] = None
     return config
-
+    
+def seed_worker(worker_id):
+    worker_seed = torch.initial_seed() % (2**32)
+    np.random.seed(worker_seed)
+    random.seed(worker_seed)
+    
 if __name__ == "__main__":
     '''
     The main function for training and testing the model
@@ -194,10 +199,6 @@ if __name__ == "__main__":
         torch.cuda.manual_seed(exp_config['init_rand_seed'])
     np.random.seed(exp_config['init_rand_seed'])
     random.seed(exp_config['init_rand_seed'])
-    def seed_worker(worker_id):
-        worker_seed = torch.initial_seed() % (2**32)
-        np.random.seed(worker_seed)
-        random.seed(worker_seed)
     
     localtime = time.localtime(time.time())  # get the current time for the log file name
     if args.mode == 1:
