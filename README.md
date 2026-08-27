@@ -34,6 +34,8 @@ We, then, propose the physics-informed **TAP3D** model to estimate the 3D point 
 ├── Models/                     # Model definitions (ThermoPT, UNet, NeWCRF, RGB2point, …)
 ├── main.py                     # Training and testing entry point
 ├── ThermalDataset.py           # Dataset loader
+├── download_extract.sh         # Downloading logs, weights and AnnotatedData (dataset) from HF, and unzip
+├── environment_setup.sh        # Setting up Python environment by downloading the libraries
 ├── Losses.py                   # Loss functions
 ├── Metrics.py                  # Evaluation metrics
 ├── utils.py                    # Training / inference utilities
@@ -48,17 +50,10 @@ We, then, propose the physics-informed **TAP3D** model to estimate the 3D point 
 
 ### Environment
 
-We recommend Python 3.10+ with CUDA. Install core dependencies:
+We recommend Python 3.9 with CUDA. Install core dependencies:
 
 ```bash
-pip install -r requirements.txt
-```
-
-Install **PyTorch3D** (required for 3D point cloud operations). Match the wheel to your PyTorch and CUDA versions:
-
-```bash
-pip install --extra-index-url https://miropsota.github.io/torch_packages_builder pytorch3d==0.7.8+pt2.5.1cu121
-# Example above is for PyTorch 2.5.1 and CUDA 12.1
+./environment_setup.sh
 ```
 
 ### Coordinate system
@@ -74,7 +69,7 @@ Large artifacts are hosted outside this repository. Download only what your targ
 | `logs/` | Precomputed metric pickles | Level 1 | `https://huggingface.co/datasets/TAP3DNow/TAP3D/resolve/main/logs.zip?download=true` | 46 MB |
 | `TAP3D_compare2others/` | Depth comparison vs. Radar / TADAR | Level 1 (Figure 10) | `https://huggingface.co/datasets/TAP3DNow/TAP3D/resolve/main/TAP3D_compare2others.zip?download=true` | 62.7 KB |
 | `weights/` | Pretrained checkpoints | Level 2 (and SSL finetune in Level 3) | `https://huggingface.co/datasets/TAP3DNow/TAP3D/resolve/main/weights.zip?download=true` | 1.5 GB |
-| `AnnotatedData/` | Annotated recordings and labels | Level 2 and Level 3 | `[TBD — cloud drive link]` |   12 GB |
+| `AnnotatedData/` | Annotated recordings and labels | Level 2 and Level 3 | `[TBD — cloud drive link]` |   2.78 GB |
 
 ---
 
