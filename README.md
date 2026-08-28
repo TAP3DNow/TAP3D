@@ -53,8 +53,13 @@ We, then, propose the physics-informed **TAP3D** model to estimate the 3D point 
 We recommend Python 3.9 with CUDA. Install core dependencies:
 
 ```bash
-./environment_setup.sh
+  # Optional: create a new environment
+  conda create -n tap3d python=3.9
+  conda activate tap3d
+  # command for install all dependencies:
+  bash environment_setup.sh
 ```
+**Note for macOS Users**: Installing the pytorch3d library may fail on macOS. However, this error can be ignored if you only intend to evaluate Level 1. For Levels 2 and 3, we strongly recommend using a Linux environment equipped with a GPU.
 
 ### Coordinate system
 
@@ -70,6 +75,13 @@ Large artifacts are hosted outside this repository. Download only what your targ
 | `TAP3D_compare2others/` | Depth comparison vs. Radar / TADAR | Level 1 (Figure 10) | `https://huggingface.co/datasets/TAP3DNow/TAP3D/resolve/main/TAP3D_compare2others.zip?download=true` | 62.7 KB |
 | `weights/` | Pretrained checkpoints | Level 2 (and SSL finetune in Level 3) | `https://huggingface.co/datasets/TAP3DNow/TAP3D/resolve/main/weights.zip?download=true` | 1.5 GB |
 | `AnnotatedData/` | Annotated recordings and labels | Level 2 and Level 3 | `https://huggingface.co/datasets/TAP3DNow/TAP3D/tree/main/AnnotatedData` |   2.78 GB |
+
+
+```bash
+  bash download_extract.sh
+```
+By default, the script downloads all resources for Levels 1–3. To download specific files (e.g., only logs.zip and TAP3D com-
+pare2others.zip for Level 1), please refer to the level-specific sections below and download them manually from our Hugging Face repository.
 
 ---
 
